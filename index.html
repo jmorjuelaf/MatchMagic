@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <h1 class="text-center">Arrastra donde corresponde</h1>
+
+    <div class="container">
+        <div class="imagen">
+            <div class="box" id="loro">
+                <img src="img/loro.jpg" alt="" draggable="true" ondragstart="drag(event)" id="loro">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="gato">
+                <img src="img/gato.jpg" alt="" draggable="true" ondragstart="drag(event)" id="gato">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="perro">
+                <img src="img/perro.jpg" alt="" draggable="true" ondragstart="drag(event)" id="perro">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="figura">
+            <div class="box" id="0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Gato</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Perro</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Loro</h2>
+        </div>
+    </div>
+
+    <button id="resetButton" class="btn btn-primary mt-3">Intentar de Nuevo</button>
+    <button id="undoButton" class="btn btn-secondary mt-3">Deshacer</button>
+    
+
+    <script src="bootstrap-5.0.2-dist/js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
