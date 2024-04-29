@@ -119,6 +119,6 @@ function goToIndex() {
     window.location.href = "index.html";
 }
 // Escuchar el evento de clic en el botón de reinicio
-//document.getElementById("resetButton").addEventListener("click", resetGame);
+document.getElementById("resetButton").addEventListener("click", resetGame);
 // Escuchar el evento de clic en el botón deshacer
 document.getElementById("undoButton").addEventListener("click", undoMove);
