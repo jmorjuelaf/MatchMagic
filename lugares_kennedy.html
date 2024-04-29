@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchmagic</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body>
+
+    
+    <header>
+        <h1 class="text-center">Lugares Kennedy</h1>
+        <h5 class="text-center">Arrastra la imagen en la casilla correspondiente</h5>
+    </header>
+
+    <div class="deshacer">
+        <button class="btn btn-info mt-3" onclick="goToIndex()">Volver a inicio</button>
+        <button id="undoButton" class="btn btn-secondary mt-3">Deshacer</button>
+    </div>
+
+    <div class="container">
+
+        <div class="imagen">
+            <div class="box" id="americas-container">
+                <img src="src/img/kennedy/Américas.jpg" alt="" draggable="true" ondragstart="drag(event)" id="americas">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="bavaria-container">
+                <img src="src/img/kennedy/Bavaria.jpg" alt="" draggable="true" ondragstart="drag(event)" id="bavaria">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="calandaima-container">
+                <img src="src/img/kennedy/Calandaima.jpg" alt="" draggable="true" ondragstart="drag(event)" id="calandaima">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="carvajal-container">
+                <img src="src/img/kennedy/Carvajal.jpg" alt="" draggable="true" ondragstart="drag(event)" id="carvajal">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="castilla-container">
+                <img src="src/img/kennedy/Castilla.jpg" alt="" draggable="true" ondragstart="drag(event)" id="castilla">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="corabastos-container">
+                <img src="src/img/kennedy/Corabastos.jpg" alt="" draggable="true" ondragstart="drag(event)" id="corabastos">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="gran_britalia-container">
+                <img src="src/img/kennedy/Gran_britalia.jpg" alt="" draggable="true" ondragstart="drag(event)" id="gran_britalia">
+            </div>
+        </div>
+
+        <div class="imagen">
+            <div class="box" id="kennedy_central-container">
+                <img src="src/img/kennedy/Kennedy_central.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Kennedy_central">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="las_margaritas-container">
+                <img src="src/img/kennedy/Las_margaritas.jpg" alt="" draggable="true" ondragstart="drag(event)" id="las_margaritas">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="patio_bonito-container">
+                <img src="src/img/kennedy/Patio_bonito.jpg" alt="" draggable="true" ondragstart="drag(event)" id="patio_bonito">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="timiza-container">
+                <img src="src/img/kennedy/Timiza.jpg" alt="" draggable="true" ondragstart="drag(event)" id="timiza">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="tintal_norte-container">
+                <img src="src/img/kennedy/Tintal_norte.jpg" alt="" draggable="true" ondragstart="drag(event)" id="tintal_norte">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="figura">
+            <div class="box" id="6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Parque Gilma Jiménez</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Biblioteca El Tintal</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Huerta Comunal Carvajal Osorio</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Humedal El Burro</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Parque Timiza</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Parque Mundo Aventura</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Central de Abastos</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Monumento de Banderas</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Lote Bavaria</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Portal TM Américas</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>CDC Bellavista</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Hacienda Tagaste</h2>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.0.2-dist/js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="src/js/kennedy/script.js"></script>
+
+</body>
+
+</html>

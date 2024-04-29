@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchmagic</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body>
+
+    
+    <header>
+        <h1 class="text-center">Tecnologías</h1>
+        <h5 class="text-center">Arrastra la imagen en la casilla correspondiente</h5>
+    </header>
+
+    <div class="deshacer">
+        <button class="btn btn-info mt-3" onclick="goToIndex()">Volver a inicio</button>
+        <button id="undoButton" class="btn btn-secondary mt-3">Deshacer</button>
+    </div>
+
+    <div class="container">
+
+        <div class="imagen">
+            <div class="box" id="cassette-container">
+                <img src="src/img/tecnologías/cassette.jpg" alt="" draggable="true" ondragstart="drag(event)" id="cassette">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="celular-container">
+                <img src="src/img/tecnologías/celular.jpg" alt="" draggable="true" ondragstart="drag(event)" id="celular">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="consola-container">
+                <img src="src/img/tecnologías/consola.jpg" alt="" draggable="true" ondragstart="drag(event)" id="consola">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="impresora-container">
+                <img src="src/img/tecnologías/impresora.jpg" alt="" draggable="true" ondragstart="drag(event)" id="impresora">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="control-container">
+                <img src="src/img/tecnologías/control.jpg" alt="" draggable="true" ondragstart="drag(event)" id="control">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="monitor-container">
+                <img src="src/img/tecnologías/monitor.jpg" alt="" draggable="true" ondragstart="drag(event)" id="monitor">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="camara-container">
+                <img src="src/img/tecnologías/camara.jpg" alt="" draggable="true" ondragstart="drag(event)" id="camara">
+            </div>
+        </div>
+
+        <div class="imagen">
+            <div class="box" id="robot-container">
+                <img src="src/img/tecnologías/robot.jpg" alt="" draggable="true" ondragstart="drag(event)" id="robot">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="mouse-container">
+                <img src="src/img/tecnologías/mouse.jpg" alt="" draggable="true" ondragstart="drag(event)" id="mouse">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="robot-container">
+                <img src="src/img/tecnologías/robot.jpg" alt="" draggable="true" ondragstart="drag(event)" id="tablet">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="televisor-container">
+                <img src="src/img/tecnologías/televisor.jpg" alt="" draggable="true" ondragstart="drag(event)" id="televisor">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="portatil-container">
+                <img src="src/img/tecnologías/portatil.jpg" alt="" draggable="true" ondragstart="drag(event)" id="portatil">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="figura">
+            <div class="box" id="6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Monitor</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Celular</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Consola</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Control</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Tablet</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Cámara</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Impresora</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Mouse</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Cassette</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Portátil</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Robot</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Televisor</h2>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.0.2-dist/js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="src/js/tecnologias/script.js"></script>
+
+</body>
+
+</html>

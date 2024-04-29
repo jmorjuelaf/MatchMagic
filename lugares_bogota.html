@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchmagic</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body>
+
+    
+    <header>
+        <h1 class="text-center">Lugares Bogotá</h1>
+        <h5 class="text-center">Arrastra la imagen en la casilla correspondiente</h5>
+    </header>
+
+    <div class="deshacer">
+        <button class="btn btn-info mt-3" onclick="goToIndex()">Volver a inicio</button>
+        <button id="undoButton" class="btn btn-secondary mt-3">Deshacer</button>
+    </div>
+
+    <div class="container">
+
+        <div class="imagen">
+            <div class="box" id="Chorro_quevedo-container">
+                <img src="src/img/bogota/Chorro_quevedo.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Chorro_quevedo">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Entre_nubes-container">
+                <img src="src/img/bogota/Entre_nubes.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Entre_nubes">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Jardin_botanico-container">
+                <img src="src/img/bogota/Jardin_botanico.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Jardin_botanico">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Monserrate-container">
+                <img src="src/img/bogota/Monserrate.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Monserrate">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Museo_nacional-container">
+                <img src="src/img/bogota/Museo_nacional.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Museo_nacional">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Museo_oro-container">
+                <img src="src/img/bogota/Museo_oro.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Museo_oro">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Parque_simon_bolivar-container">
+                <img src="src/img/bogota/Parque_simon_bolivar.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Parque_simon_bolivar">
+            </div>
+        </div>
+
+        <div class="imagen">
+            <div class="box" id="Planetario_bogota-container">
+                <img src="src/img/bogota/Planetario_bogota.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Planetario_bogota">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Plaza_bolivar-container">
+                <img src="src/img/bogota/Plaza_bolivar.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Plaza_bolivar">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Trasmicable-container">
+                <img src="src/img/bogota/Trasmicable.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Trasmicable">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Tren_sabana-container">
+                <img src="src/img/bogota/Tren_sabana.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Tren_sabana">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="Virgilio_barco-container">
+                <img src="src/img/bogota/Virgilio_barco.jpg" alt="" draggable="true" ondragstart="drag(event)" id="Virgilio_barco">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="figura">
+            <div class="box" id="6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Parque Simón Bolívar</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Jardín Botánico</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Cerro de Monserrate</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Museo Nacional</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Tren de la Sabana</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Plazoleta Chorro de Quevedo</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Museo del Oro</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Planetario Bogotá</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Parque Entre Nubes</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Plaza de Bolívar</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Trasmicable</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Biblioteca Virgilio Barco</h2>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.0.2-dist/js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="src/js/Bogotá/script.js"></script>
+
+</body>
+
+</html>

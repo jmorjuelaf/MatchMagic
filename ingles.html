@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchmagic</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body>
+
+    
+    <header>
+        <h1 class="text-center">Colores en Inglés (English colours)</h1>
+        <h5 class="text-center">Arrastra la imagen en la casilla correspondiente</h5>
+    </header>
+
+    <div class="deshacer">
+        <button class="btn btn-info mt-3" onclick="goToIndex()">Volver a inicio</button>
+        <button id="undoButton" class="btn btn-secondary mt-3">Deshacer</button>
+    </div>
+
+    <div class="container">
+
+        <div class="imagen">
+            <div class="box" id="black-container">
+                <img src="src/img/ingles/black.jpg" alt="" draggable="true" ondragstart="drag(event)" id="black">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="blue-container">
+                <img src="src/img/ingles/blue.jpg" alt="" draggable="true" ondragstart="drag(event)" id="blue">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="brown-container">
+                <img src="src/img/ingles/brown.jpg" alt="" draggable="true" ondragstart="drag(event)" id="brown">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="gray-container">
+                <img src="src/img/ingles/gray.jpg" alt=" draggable="true" ondragstart="drag(event)" id="gray">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="green-container">
+                <img src="src/img/ingles/green.jpg" alt="" draggable="true" ondragstart="drag(event)" id="green">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="orange-container">
+                <img src="src/img/ingles/orange.jpg" alt="" draggable="true" ondragstart="drag(event)" id="orange">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="pink-container">
+                <img src="src/img/ingles/pink.jpg" alt="" draggable="true" ondragstart="drag(event)" id="pink">
+            </div>
+        </div>
+
+        <div class="imagen">
+            <div class="box" id="purple-container">
+                <img src="src/img/ingles/purple.jpg" alt="" draggable="true" ondragstart="drag(event)" id="purple">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="red">
+                <img src="src/img/ingles/red.jpg" alt="" draggable="true" ondragstart="drag(event)" id="red">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="violet-container">
+                <img src="src/img/ingles/violet.jpg" alt="" draggable="true" ondragstart="drag(event)" id="violet">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="white-container">
+                <img src="src/img/ingles/white.jpg" alt="" draggable="true" ondragstart="drag(event)" id="white">
+            </div>
+        </div>
+        <div class="imagen">
+            <div class="box" id="yellow">
+                <img src="src/img/ingles/yellow.jpg" alt="" draggable="true" ondragstart="drag(event)" id="yellow">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="figura">
+            <div class="box" id="6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Pink (Rosado)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Brown (Café)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Gray (Gris)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Green (Verde)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="10" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>White (Blanco)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Black (Negro)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Orange (Naranja)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Purple (Morado)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Blue (Azul)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Red (Rojo)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="9" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Violet (Violeta)</h2>
+        </div>
+        <div class="figura">
+            <div class="box" id="11" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h2>Yellow (Amarillo)</h2>
+        </div>
+    </div>
+
+    <script src="bootstrap-5.0.2-dist/js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="src/js/inglés/script.js"></script>
+
+</body>
+
+</html>
