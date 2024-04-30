@@ -2,7 +2,7 @@ function startGame() {
     const maxPairNumber = 4;
     let foundPairs = 0; // Cambiado de const a let
     const cards = Array.from(document.querySelectorAll(".board-game figure"));
-    const availableImages = [1, 2, 3, 4];
+    const availableImages = [9, 10, 11, 12];
     let canPlay = false;
     let card1 = null;
     let card2 = null;
