@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <link rel="stylesheet" href="src/css/ahorcado.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-center">Adivina la palabra</h1>
+        <h5 class="text-center">Usar el teclado para adivinar la palabra correcta</h5>
+        <div class="deshacer">
+            <button class="btn btn-info mt-3" onclick="goToIndex()">Volver a inicio</button>
+        </div>
+    </header>
+
+    <section>
+        <div id="palabra">
+            <div class="letra pintar">C</div>
+            <div class="letra">A</div>
+            <div class="letra">S</div>
+            <div class="letra">T</div>
+            <div class="letra">I</div>
+            <div class="letra">L</div>
+            <div class="letra">L</div>
+            <div class="letra">A</div>
+        </div>
+        <h3>Ayuda: <span id="ayuda">¿Donde queda la parroquia del Padre Chucho?</span> </h3>
+        <h3>Intentos restantes: <span id="intentos">5</span></h3>
+        <h3>Letras ingresadas: <span id="letrasIngresadas"></span></h3>
+
+        <button onclick="cargarNuevaPalabra()">Nueva Palabra</button>
+    </section>
+    
+    <script src="bootstrap-5.0.2-dist/js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/popper.min.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="src/js/ahorcado.js"></script>
+</body>
+
+</html>

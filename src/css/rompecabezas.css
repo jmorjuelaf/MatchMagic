@@ -1,62 +1,100 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  font-family: Arial, sans-serif;
+  width: 940px;
+  margin: 5% auto;
+  min-height: 100%;
+  background: linear-gradient(135deg, rgba(34,193,195,1) 23%, rgb(247, 247, 244) 100%); 
 }
 
-main {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: 1000px;
-    margin: auto;
+
+ul {
+  padding-left: 0;
+  list-style: none;
+  color: #000;
+  font-style:black;
+}
+li {
+  padding: 5px 0;
+  animation: fadein 5s;
 }
 
-figure,
-figure img {
-    display: inline-block;
-    width: 100%;
+li::before {
+  content: "• ";
+  color: #000 
 }
 
-figure {
-    position: relative;
-    transition: all ease .5s;
-    transform-style: preserve-3d;
-    transform: perspective(600px) rotateY(0deg);
-    cursor: pointer;
-    box-shadow: 3px 3px 16px rgb(0, 0, 0, 0.6);
+.col-40 h1 {
+  font-size: 20px;
+  color: #1c6969; 
 }
 
-figure::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0);
-    transition: 0.3s all ease;
+.col-40, .col-60 {
+  display: table-cell;
+  margin: 0;
+  vertical-align: top;
 }
 
-figure:hover:after {
-    background: rgba(255, 255, 255, 0.137);
+.col-40 {
+  background: #9be2e8;
+  padding: 30px;
 }
 
-figure.opened {
-    transform: perspective(600px) rotateY(180deg);
+.col-60 {
+  background:	#1c6969; 
 }
 
-figure .back {
-    display: block;
-    backface-visibility: hidden;
+#flecha{
+  font-size: 60px;
 }
 
-figure .searched-image {
-    position: absolute;
-    top: 0;
-    transform: perspective(600px) rotateY(180deg);
-    backface-visibility: hidden;
-    height: 100%;
-    overflow: hidden;
+.texto-centrado {
+  text-align: center;
+}
+
+#juego div {
+  text-align: center;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/*Lo nuevo*/
+
+.col-40{
+  width:40%;
+}
+
+.col-60{
+  width:60%;
+}
+
+#juego {
+  height:600px;
+  width:600px;
+}
+
+.partes{
+  border: 1px solid #1c6969; 
+  float: left;
+  width: 33%;
+  height: 33%;
+}
+
+.partes img{
+  width:100%;
+}
+
+#titulo {
+  text-align: center;
+  background-color: #a6bdbd; 
+}
+h1 {
+  color: #1c6969; 
+  font-weight: bold;
+}
+.deshacer{
+  text-align: center;
 }
